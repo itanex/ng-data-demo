@@ -1,0 +1,23 @@
+{
+  "name": "ng-lesson-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "start": "concurrently \"npm run lite\" \"npm run tsc:w\" "
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Bryan Wood",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lite-server": "^2.2.2",
+    "concurrently": "^3.1.0",
+    "@types/angular": "1.6.2"
+  }
+}
