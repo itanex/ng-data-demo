@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="lesson">
+<html ng-app="demo">
 
 <head>
     <title>Title</title>
@@ -36,18 +36,44 @@
         </div>
     </nav>
 
-    <div class="container">
-
+    <div class="container" ng-controller="HomeController as vm">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Make</th>
+                    <th>Price</th>
+                    <th>Short Description</th>
+                    <th>Long Description</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="car in vm.cars">
+                    <td>{{car.id}}</td>
+                    <td>{{car.make}}</td>
+                    <td>{{car.price}}</td>
+                    <td>{{car.shortDesc}}</td>
+                    <td>{{car.longDesc}}</td>
+                    <td><img src="{{car.imgUrl}}" class="img-responsive"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <!-- /.container -->
 
 
     <!-- Library Dependencies -->
     <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
 
     <!-- Application Dependencies -->
+    <script src="js/models/car.model.js"></script>
+
+    <script src="js/home/home.services.js"></script>
     <script src="js/home/home.controller.js"></script>
     <script src="js/home/home.js"></script>
+
     <script src="js/app.js"></script>
 </body>
 
